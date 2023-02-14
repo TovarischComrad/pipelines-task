@@ -25,10 +25,5 @@ def prefect():
     copy_to_file(df)
 
 
-
-def somethink():
-    x = 0
-
-
 if __name__ == "__main__":
     prefect()
