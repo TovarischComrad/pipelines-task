@@ -7,7 +7,7 @@ poetry install
 ```
 
 # Prefect
-Для запуска проекта на Dagster необходимо запустить файл **run_prefect.bat**.
+Для запуска проекта на Prefect необходимо запустить файл **run_prefect.bat**.
 
 Или в корне проекта выполнить команду:
 ```commandline
@@ -15,7 +15,7 @@ poetry run prefect
 ```
 
 # Dagster
-Для запуска проекта на Prefect необходимо запустить файл **run_dagster.bat**.
+Для запуска проекта на Dagster необходимо запустить файл **run_dagster.bat**.
 
 Или в корне проекта выполнить команды:
 ```commandline
