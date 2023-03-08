@@ -10,7 +10,7 @@ TASKS = [
         table='norm',
         sql_query='''
             select *, domain_of_url(url)
-            from {original};
+            from original;
         '''
     ),
     tasks.CopyToFile(
@@ -19,8 +19,8 @@ TASKS = [
     ),
 
     # clean up:
-    tasks.RunSQL('drop table {original}'),
-    tasks.RunSQL('drop table {norm}'),
+    tasks.RunSQL('drop table original'),
+    tasks.RunSQL('drop table norm'),
 ]
 
 
