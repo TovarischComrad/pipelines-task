@@ -1,5 +1,5 @@
 import sqlite3 as sql
-import pandas as pd
+from pandas import read_csv, read_sql_query
 import re
 import csv
 connect_str = 'database.db'
@@ -7,7 +7,7 @@ connect_str = 'database.db'
 
 def load_file(file, table):
     db = sql.connect(connect_str)
-    pd.read_csv(f'{file}').to_sql(name=table, con=db, if_exists='append', index=False)
+    read_csv(f'{file}').to_sql(name=table, con=db, if_exists='append', index=False)
 
 
 def domain(url):
@@ -22,7 +22,7 @@ def ctas(table, query):
 
 def save(file, table):
     db = sql.connect(connect_str)
-    df = pd.read_sql_query("SELECT * FROM " + table, db)
+    df = read_sql_query("SELECT * FROM " + table, db)
     df.to_csv(file + ".csv", index=False)
 
 
