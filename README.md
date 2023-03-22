@@ -1,5 +1,12 @@
 # Pipelines — ETL Framework
 
+## Launch Project
+
+```shell
+> cd example_pipeline 
+> poetry run pipelines run 
+```
+
 ## Quickstart
 
 ### Initialization

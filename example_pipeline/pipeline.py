@@ -31,8 +31,13 @@ pipeline = Pipeline(
 )
 
 
+def run():
+    pipeline.run()
+
+
 if __name__ == "__main__":
     # 1: Run as script
+    # run()
     pipeline.run()
 
     # 2: Run as CLI
