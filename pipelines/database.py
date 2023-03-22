@@ -21,12 +21,9 @@ def ctas(table, query):
 
 
 def save(file, table):
-    with open(f"{file}.csv", "w") as file:
-        cur = sql.connect(connect_str).cursor()
-        writer = csv.writer(file)
-        writer.writerow(['id', 'name', 'url', 'domain_of_url'])
-        data = cur.execute("SELECT * FROM " + table)
-        writer.writerows(data)
+    db = sql.connect(connect_str)
+    df = pd.read_sql_query("SELECT * FROM " + table, db)
+    df.to_csv(file + ".csv", index=False)
 
 
 def run_sql(query):
