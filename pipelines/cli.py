@@ -3,6 +3,7 @@ import click
 from . import tasks
 from .core import Pipeline
 from .load import load_pipeline
+import pandas as pd
 
 
 # TASKS = [
@@ -33,6 +34,13 @@ def list():
 def run():
     pipeline = load_pipeline()
     pipeline.run()
+
+
+@cli.command()
+def show():
+    file = 'norm.csv'
+    data = pd.read_csv(file)
+    print(data)
 
 
 def main():

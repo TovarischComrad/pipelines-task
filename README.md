@@ -1,10 +1,18 @@
 # Pipelines — ETL Framework
 
+## Launch with Docker
+
+```shell
+> docker build -t pipelines .
+> docker run pipelines
+```
+
 ## Launch Project
 
 ```shell
 > cd example_pipeline 
-> poetry run pipelines run 
+> poetry run pipelines run
+> poetry run pipelines show
 ```
 
 ## Quickstart
